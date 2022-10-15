@@ -33,6 +33,8 @@ animations = [ {
 extents = Vector2( 4, 7 )
 
 [node name="Heroi" type="KinematicBody2D"]
+collision_layer = 2
+collision_mask = 17
 script = ExtResource( 5 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]

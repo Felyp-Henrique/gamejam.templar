@@ -63,6 +63,16 @@ ui_attack={
  ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="Mapa"
+2d_physics/layer_2="Heroi"
+2d_physics/layer_3="Heroi_HurtBox"
+2d_physics/layer_4="Heroi_HitBox"
+2d_physics/layer_5="Inimigo"
+2d_physics/layer_6="Inimigo_HurtBox"
+2d_physics/layer_7="Inimigo_HitBox"
+
 [mono]
 
 project/assembly_name="GameJam6"

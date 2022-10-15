@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public class Map : Node2D
+public class Mapa : Node2D
 {
     [Export]
     public string HeroiPath = "./Heroi";

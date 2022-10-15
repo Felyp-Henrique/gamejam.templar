@@ -1,7 +1,5 @@
-using Godot;
-using System;
 
-public class Limbo : Map
+public class Limbo : Mapa
 {
     public override void _Ready()
     {

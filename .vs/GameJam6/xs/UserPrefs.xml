@@ -1,19 +1,19 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Scenes/Inimigos/Inimigo.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Core/Inimigo.cs">
     <Files>
-      <File FileName="Scenes/Heroi/Heroi.cs" Line="29" Column="10" />
-      <File FileName="Scenes/Inimigos/Inimigo.cs" Line="32" Column="54" />
+      <File FileName="Scenes/Inimigos/Zumbi.cs" Line="8" Column="6" />
+      <File FileName="Core/Inimigo.cs" Line="30" Column="83" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="GameJam6" expanded="True">
             <Node name="GameJam6" expanded="True">
+              <Node name="Core" expanded="True">
+                <Node name="Inimigo.cs" selected="True" />
+              </Node>
               <Node name="Scenes" expanded="True">
-                <Node name="Heroi" expanded="True" />
-                <Node name="Inimigos" expanded="True">
-                  <Node name="Inimigo.cs" selected="True" />
-                </Node>
+                <Node name="Inimigos" expanded="True" />
               </Node>
             </Node>
           </Node>
