@@ -1,0 +1,30 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Scenes/Inimigos/Inimigo.cs">
+    <Files>
+      <File FileName="Scenes/Heroi/Heroi.cs" Line="29" Column="10" />
+      <File FileName="Scenes/Inimigos/Inimigo.cs" Line="32" Column="54" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="GameJam6" expanded="True">
+            <Node name="GameJam6" expanded="True">
+              <Node name="Scenes" expanded="True">
+                <Node name="Heroi" expanded="True" />
+                <Node name="Inimigos" expanded="True">
+                  <Node name="Inimigo.cs" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -1,16 +1,18 @@
 using Godot;
-using System;
 
 public class Heroi : KinematicBody2D
 {
-    private static readonly string NODE_SPRITE = "./Sprite";
+    [Export]
+    public int Velocidade = 50;
+
+    [Export]
+    public string SpritePath =  "./Sprite";
 
     private AnimatedSprite _Sprite;
-    private float _Velocidade = 50;
 
     public override void _Ready()
     {
-        _Sprite = GetNode<AnimatedSprite>(NODE_SPRITE);
+        _Sprite = GetNode<AnimatedSprite>(SpritePath);
     }
 
     public override void _PhysicsProcess(float delta)
@@ -21,9 +23,9 @@ public class Heroi : KinematicBody2D
         movimento.y = Input.GetActionStrength("ui_down") - Input.GetActionStrength("ui_up");
         movimento = movimento.Normalized();
 
-        MoveAndSlide(movimento * _Velocidade);
+        MoveAndSlide(movimento * Velocidade);
 
-        if (movimento.x != 0 || movimento.y != 0)
+        if (movimento != Vector2.Zero)
         {
             _Sprite.FlipH = movimento.x < 0;
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/objeto.png-900d40c2e230f9234ce25d5d9b4c5197.stex"
+path="res://.import/zumbi_walk_4.png-6f06bb68ec3f112efcd88f17fd0220ef.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tiles/objeto.png"
-dest_files=[ "res://.import/objeto.png-900d40c2e230f9234ce25d5d9b4c5197.stex" ]
+source_file="res://Assets/Sprites/zumbi_walk_4.png"
+dest_files=[ "res://.import/zumbi_walk_4.png-6f06bb68ec3f112efcd88f17fd0220ef.stex" ]
 
 [params]
 

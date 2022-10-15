@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/chao.png-c4049eaa4a91577982ca73161a6ec400.stex"
+path="res://.import/zumbi_idle_2.png-e1c51e9a3b5250a333c2af3d25938a73.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tiles/chao.png"
-dest_files=[ "res://.import/chao.png-c4049eaa4a91577982ca73161a6ec400.stex" ]
+source_file="res://Assets/Sprites/zumbi_idle_2.png"
+dest_files=[ "res://.import/zumbi_idle_2.png-e1c51e9a3b5250a333c2af3d25938a73.stex" ]
 
 [params]
 
