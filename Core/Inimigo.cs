@@ -15,13 +15,13 @@ public class Inimigo : KinematicBody2D
     public string AlcancePath = "./Alcance";
 
     private AnimatedSprite _Sprite;
-    private Alcance _Alcance;
+    private Area2D _Alcance;
     private State _State;
 
     public override void _Ready()
     {
         _State = State.GetInstance();
-        _Alcance = GetNode<Alcance>(AlcancePath);
+        _Alcance = GetNode<Area2D>(AlcancePath);
         _Sprite = GetNode<AnimatedSprite>(SpritePath);
     }
 
