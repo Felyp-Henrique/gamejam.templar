@@ -1,10 +1,15 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://Assets/Tiles/cavernas.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Maps/Limbo.cs" type="Script" id=2]
 [ext_resource path="res://Scenes/Heroi/Heroi.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/Inimigos/Spawner.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Core/InimigoFactory.cs" type="Script" id=4]
 [ext_resource path="res://Scenes/Inimigos/Zumbi.tscn" type="PackedScene" id=5]
+
+[sub_resource type="Curve2D" id=37]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 249.162, 75.9786, 0, 0, 0, 0, 231.15, 75.9786, 0, 0, 0, 0, 231.15, 79.0588, 0, 0, 0, 0, 249.162, 79.0588, 0, 0, 0, 0, 249.162, 82.1391, 0, 0, 0, 0, 201.131, 82.1391, 0, 0, 0, 0, 201.131, 75.9786, 0, 0, 0, 0, 204.898, 75.9908, 0, 0, 0, 0, 204.898, 71.892, 0, 0, 0, 0, 179.701, 71.892, 0, 0, 0, 0, 179.701, 74.9661, 0, 0, 0, 0, 123.008, 74.9661, 0, 0, 0, 0, 123.008, 63.6943, 0, 0, 0, 0, 186, 63.6943, 0, 0, 0, 0, 248.992, 63.6943, 0, 0, 0, 0, 249.162, 75.9786 )
+}
 
 [sub_resource type="ConvexPolygonShape2D" id=3]
 points = PoolVector2Array( 16, 16, 11.561, 16, 11.561, 12.7441, 16, 12.7441 )
@@ -308,22 +313,22 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
 [node name="Limbo" type="Node2D"]
 script = ExtResource( 2 )
+InimigoLength = 6
+
+[node name="InimigoFactory" type="Node2D" parent="."]
+script = ExtResource( 4 )
+Inimigos = [ ExtResource( 5 ) ]
 
 [node name="Heroi" parent="." instance=ExtResource( 3 )]
-position = Vector2( 34, 33 )
+position = Vector2( 80, 160 )
 z_index = 1
 
-[node name="Spawner" parent="." instance=ExtResource( 4 )]
-position = Vector2( 272, 80 )
-MapaPath = NodePath("..")
-InimigoScene = ExtResource( 5 )
-Quantidade = 2
+[node name="Spawner" type="Path2D" parent="."]
+position = Vector2( -304.441, -473.267 )
+scale = Vector2( 2.54001, 7.80709 )
+curve = SubResource( 37 )
 
-[node name="Spawner2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 88, 112 )
-MapaPath = NodePath("..")
-InimigoScene = ExtResource( 5 )
-Quantidade = 2
+[node name="Locations" type="PathFollow2D" parent="Spawner"]
 
 [node name="Paredes" type="TileMap" parent="."]
 tile_set = SubResource( 24 )

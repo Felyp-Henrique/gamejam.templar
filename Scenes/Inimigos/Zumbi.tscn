@@ -23,30 +23,31 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=2]
+[sub_resource type="CapsuleShape2D" id=4]
 radius = 11.0
-height = 8.0
+height = 10.0
 
 [sub_resource type="CircleShape2D" id=3]
-radius = 51.0098
+radius = 48.5077
 
 [node name="Zumbi" type="KinematicBody2D"]
-z_index = 2
+z_index = 1
 collision_layer = 16
 collision_mask = 19
 script = ExtResource( 9 )
 Velocidade = 40
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0, -17 )
 frames = SubResource( 1 )
 animation = "walk"
 
 [node name="Collision" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 5 )
-shape = SubResource( 2 )
+position = Vector2( 0, -12 )
+shape = SubResource( 4 )
 
 [node name="Alcance" type="Area2D" parent="."]
-position = Vector2( 0, 7 )
+position = Vector2( 0, -11 )
 collision_layer = 0
 collision_mask = 2
 

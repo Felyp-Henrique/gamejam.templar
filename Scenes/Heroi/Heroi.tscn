@@ -39,9 +39,10 @@ collision_mask = 17
 script = ExtResource( 5 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0, -7 )
 frames = SubResource( 1 )
 animation = "attack_walk"
 
 [node name="Collision" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 1 )
+position = Vector2( 0, -7 )
 shape = SubResource( 2 )

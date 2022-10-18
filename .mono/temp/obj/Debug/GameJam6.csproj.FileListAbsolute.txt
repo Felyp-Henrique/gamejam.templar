@@ -6,3 +6,4 @@
 /home/felyp/GameJam6/.mono/temp/obj/Debug/GameJam6.csproj.CoreCompileInputs.cache
 /home/felyp/GameJam6/.mono/temp/obj/Debug/GameJam6.dll
 /home/felyp/GameJam6/.mono/temp/obj/Debug/GameJam6.pdb
+/home/felyp/GameJam6/.mono/temp/obj/Debug/GameJam6.GeneratedMSBuildEditorConfig.editorconfig
