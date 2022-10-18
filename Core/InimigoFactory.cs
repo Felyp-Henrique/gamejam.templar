@@ -3,19 +3,21 @@ using Godot;
 public class InimigoFactory : Node
 {
     [Export]
+    public NodePath AlvoPath;
+
+    [Export]
     public PackedScene[] Inimigos = {};
 
-    public T GetInimigo<T>() where T: Node
+    public Inimigo GetInimigo()
     {
+        Inimigo inimigo = null;
         if (Inimigos != null && Inimigos.Length > 0)
         {
             int index = (int) GD.RandRange(0, Inimigos.Length - 1);
-            return Inimigos[index].Instance<T>();
+            inimigo = Inimigos[index].Instance<Inimigo>();
+            inimigo.AlvoPath = AlvoPath;
         }
-        else
-        {
-            return null;
-        }
+        return inimigo;
     }
 
     public override void _Ready()

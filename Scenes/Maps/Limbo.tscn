@@ -317,6 +317,7 @@ InimigoLength = 6
 
 [node name="InimigoFactory" type="Node2D" parent="."]
 script = ExtResource( 4 )
+AlvoPath = NodePath("../Heroi")
 Inimigos = [ ExtResource( 5 ) ]
 
 [node name="Heroi" parent="." instance=ExtResource( 3 )]
@@ -329,6 +330,8 @@ scale = Vector2( 2.54001, 7.80709 )
 curve = SubResource( 37 )
 
 [node name="Locations" type="PathFollow2D" parent="Spawner"]
+position = Vector2( 249.162, 75.9786 )
+rotation = -3.14159
 
 [node name="Paredes" type="TileMap" parent="."]
 tile_set = SubResource( 24 )

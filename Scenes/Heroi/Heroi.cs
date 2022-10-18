@@ -6,7 +6,7 @@ public class Heroi : KinematicBody2D
     public int Velocidade = 50;
 
     [Export]
-    public string SpritePath =  "./Sprite";
+    public NodePath SpritePath =  "./Sprite";
 
     private AnimatedSprite _Sprite;
 

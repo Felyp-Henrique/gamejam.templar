@@ -9,36 +9,47 @@ public class Inimigo : KinematicBody2D
     public double Vida = 100d;
 
     [Export]
-    public string SpritePath = "./Sprite";
+    public NodePath SpritePath = "./Sprite";
 
     [Export]
-    public string AlcancePath = "./Alcance";
+    public NodePath AlcancePath = "./Alcance";
 
+    [Export]
+    public NodePath AlvoPath;
+
+    private KinematicBody2D _Alvo;
     private AnimatedSprite _Sprite;
     private Area2D _Alcance;
-    private State _State;
 
     public override void _Ready()
     {
-        _State = State.GetInstance();
         _Alcance = GetNode<Area2D>(AlcancePath);
         _Sprite = GetNode<AnimatedSprite>(SpritePath);
+        if (AlvoPath != null) {
+            _Alvo = GetNode<KinematicBody2D>(AlvoPath);
+        }
     }
 
     public override void _PhysicsProcess(float delta)
     {
-        if (_State.GetHeroi() != null && _Alcance.OverlapsBody(_State.GetHeroi()))
+        if (_Alvo != null && _Alcance.OverlapsBody(_Alvo))
         {
-            Vector2 direcao = GlobalPosition.DirectionTo(_State.GetHeroi().GlobalPosition);
+            Vector2 direcao = Position.DirectionTo(_Alvo.Position);
 
             MoveAndSlide(direcao * Velocidade);
 
-            _Sprite.FlipH = direcao.x < 0;
-            _Sprite.Play("walk");
+            if (_Sprite != null)
+            {
+                _Sprite.FlipH = direcao.x < 0;
+                _Sprite.Play("walk");
+            }
         }
         else
         {
-            _Sprite.Play("idle");
+            if (_Sprite != null)
+            {
+                _Sprite.Play("idle");
+            }
         }
     }
 }
