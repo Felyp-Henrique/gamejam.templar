@@ -9,23 +9,15 @@ public class Heroi : KinematicBody2D
     public int Velocidade = 50;
 
     [Export]
-    public double Forca = 5;
+    public double Forca = 25;
 
     [Export]
-    public NodePath SpritePath =  "./Sprite";
+    public NodePath SpritePath = "./Sprite";
 
     [Signal]
     public delegate void Ataque(double forca);
 
     private AnimatedSprite _Sprite;
-
-    private float _AtaqueTime = 0;
-    private bool _AtaquePausa = false;
-
-    private float ExecDelay(float Delta, float TimerDelay)
-    {
-        return TimerDelay += 1 * Delta;
-    }
 
     public void Ferir(double forca)
     {
@@ -35,6 +27,14 @@ public class Heroi : KinematicBody2D
     public override void _Ready()
     {
         _Sprite = GetNode<AnimatedSprite>(SpritePath);
+    }
+
+    public override void _Input(InputEvent @event)
+    {
+        if (@event.IsActionPressed("ui_attack"))
+        {
+            EmitSignal("Ataque", Forca);
+        }
     }
 
     public override void _PhysicsProcess(float delta)
@@ -47,44 +47,16 @@ public class Heroi : KinematicBody2D
 
         MoveAndSlide(movimento * Velocidade);
 
-        if (movimento != Vector2.Zero)
-        {
-            _Sprite.FlipH = movimento.x < 0;
-
-            if (Input.IsActionPressed("ui_attack"))
+        if (_Sprite != null) {
+            if (movimento != Vector2.Zero)
             {
-                _Sprite.Play("attack_walk");
-            }
-            else
-            {
+                _Sprite.FlipH = movimento.x < 0;
                 _Sprite.Play("walk");
             }
-        }
-        else
-        {
-            _Sprite.FlipV = false;
-
-            if (Input.IsActionPressed("ui_attack") && !_AtaquePausa)
-            {
-                _Sprite.Play("attack_idle");
-                EmitSignal("Ataque", Forca);
-                _AtaqueTime = 0;
-                _AtaquePausa = true;
-            }
             else
             {
+                _Sprite.FlipV = false;
                 _Sprite.Play("idle");
-            }
-
-            if (_AtaquePausa)
-            {
-                _AtaqueTime += delta;
-            }
-
-            if (_AtaqueTime > 0.8)
-            {
-                _AtaqueTime = 0;
-                _AtaquePausa = false;
             }
         }
     }

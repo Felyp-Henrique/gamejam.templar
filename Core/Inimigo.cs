@@ -39,7 +39,7 @@ public class Inimigo : KinematicBody2D
 
     public void Ferir(double forca)
     {
-        if (_Alcance != null && _Alvo != null && _Alcance.OverlapsBody(_Alvo))
+        if (_Ataque != null && _Alvo != null && _Ataque.OverlapsBody(_Alvo))
         {
             Vida -= forca;
         }
