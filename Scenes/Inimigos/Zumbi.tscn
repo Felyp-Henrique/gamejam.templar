@@ -28,10 +28,10 @@ radius = 11.0
 height = 10.0
 
 [sub_resource type="CircleShape2D" id=3]
-radius = 48.5077
+radius = 62.0
 
 [sub_resource type="CircleShape2D" id=5]
-radius = 26.0
+radius = 20.0
 
 [node name="Zumbi" type="KinematicBody2D"]
 z_index = 1
