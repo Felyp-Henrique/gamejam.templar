@@ -6,6 +6,9 @@ public class InimigoFactory : Node
     public NodePath AlvoPath;
 
     [Export]
+    public NodePath NavegacaoPath;
+
+    [Export]
     public PackedScene[] Inimigos = {};
 
     public Inimigo GetInimigo()
@@ -16,6 +19,7 @@ public class InimigoFactory : Node
             int index = (int) GD.RandRange(0, Inimigos.Length - 1);
             inimigo = Inimigos[index].Instance<Inimigo>();
             inimigo.AlvoPath = AlvoPath;
+            inimigo.NavegacaoPath = NavegacaoPath;
         }
         return inimigo;
     }

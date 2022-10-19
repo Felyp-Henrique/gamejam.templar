@@ -62,7 +62,3 @@ shape = SubResource( 3 )
 [node name="Collision" type="CollisionShape2D" parent="Ataque"]
 position = Vector2( 0, -12 )
 shape = SubResource( 5 )
-
-[node name="Collision2" type="CollisionShape2D" parent="Ataque"]
-position = Vector2( 0, -12 )
-shape = SubResource( 5 )

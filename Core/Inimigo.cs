@@ -23,11 +23,16 @@ public class Inimigo : KinematicBody2D
     [Export]
     public NodePath AlvoPath;
 
+    [Export]
+    public NodePath NavegacaoPath;
+
     private KinematicBody2D _Alvo;
+    private Vector2[] _AlvoCaminhos = {};
     private AnimatedSprite _Sprite;
     private Area2D _Alcance;
     private Area2D _Ataque;
     private float _AtaqueTime;
+    private Navigation2D _Navegacao;
 
     public override void _Ready()
     {
@@ -38,6 +43,10 @@ public class Inimigo : KinematicBody2D
         {
             _Alvo = GetNode<KinematicBody2D>(AlvoPath);
         }
+        if (NavegacaoPath != null)
+        {
+            _Navegacao = GetNode<Navigation2D>(NavegacaoPath);
+        }
     }
 
     public override void _PhysicsProcess(float delta)
@@ -46,11 +55,18 @@ public class Inimigo : KinematicBody2D
          * Movimentação e Perseguição
          */
 
-        if (_Alvo != null && _Alcance.OverlapsBody(_Alvo) && !_Ataque.OverlapsBody(_Alvo))
+        if (_Alvo != null && _Navegacao != null && _Alcance.OverlapsBody(_Alvo) && !_Ataque.OverlapsBody(_Alvo))
         {
-            Vector2 direcao = Position.DirectionTo(_Alvo.Position);
+            Vector2 direcao = Vector2.Zero;
 
-            MoveAndSlide(direcao * Velocidade);
+            _AlvoCaminhos = _Navegacao.GetSimplePath(Position, _Alvo.Position, false);
+
+            if (_AlvoCaminhos.Length > 0)
+            {
+                direcao = Position.DirectionTo(_AlvoCaminhos[1]);
+
+                MoveAndSlide(direcao * Velocidade);
+            }
 
             if (_Sprite != null)
             {
@@ -62,6 +78,8 @@ public class Inimigo : KinematicBody2D
         }
         else
         {
+            _AlvoCaminhos = new Vector2[] {};
+
             if (_Sprite != null)
             {
                 _Sprite.Play("idle");
