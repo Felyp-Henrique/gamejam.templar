@@ -7,3 +7,12 @@
 /home/felyp/GameJam6/.mono/temp/obj/Debug/GameJam6.dll
 /home/felyp/GameJam6/.mono/temp/obj/Debug/GameJam6.pdb
 /home/felyp/GameJam6/.mono/temp/obj/Debug/GameJam6.GeneratedMSBuildEditorConfig.editorconfig
+/home/danielmelonari/Documentos/repositorios/gamejam.6/.mono/temp/bin/Debug/GameJam6.dll
+/home/danielmelonari/Documentos/repositorios/gamejam.6/.mono/temp/bin/Debug/GameJam6.pdb
+/home/danielmelonari/Documentos/repositorios/gamejam.6/.mono/temp/obj/Debug/GameJam6.csproj.AssemblyReference.cache
+/home/danielmelonari/Documentos/repositorios/gamejam.6/.mono/temp/obj/Debug/GameJam6.GeneratedMSBuildEditorConfig.editorconfig
+/home/danielmelonari/Documentos/repositorios/gamejam.6/.mono/temp/obj/Debug/GameJam6.AssemblyInfoInputs.cache
+/home/danielmelonari/Documentos/repositorios/gamejam.6/.mono/temp/obj/Debug/GameJam6.AssemblyInfo.cs
+/home/danielmelonari/Documentos/repositorios/gamejam.6/.mono/temp/obj/Debug/GameJam6.csproj.CoreCompileInputs.cache
+/home/danielmelonari/Documentos/repositorios/gamejam.6/.mono/temp/obj/Debug/GameJam6.dll
+/home/danielmelonari/Documentos/repositorios/gamejam.6/.mono/temp/obj/Debug/GameJam6.pdb

@@ -9,6 +9,9 @@ public class Inimigo : KinematicBody2D
     public double Vida = 100d;
 
     [Export]
+    public double Forca = 2;
+
+    [Export]
     public NodePath SpritePath = "./Sprite";
 
     [Export]
@@ -26,13 +29,21 @@ public class Inimigo : KinematicBody2D
     [Export]
     public NodePath NavegacaoPath;
 
-    private KinematicBody2D _Alvo;
+    protected Heroi _Alvo;
     private Vector2[] _AlvoCaminhos = {};
     private AnimatedSprite _Sprite;
     private Area2D _Alcance;
     private Area2D _Ataque;
     private float _AtaqueTime;
     private Navigation2D _Navegacao;
+
+    public void Ferir(double forca)
+    {
+        if (_Alcance != null && _Alvo != null && _Alcance.OverlapsBody(_Alvo))
+        {
+            Vida -= forca;
+        }
+    }
 
     public override void _Ready()
     {
@@ -41,11 +52,19 @@ public class Inimigo : KinematicBody2D
         _Sprite = GetNode<AnimatedSprite>(SpritePath);
         if (AlvoPath != null)
         {
-            _Alvo = GetNode<KinematicBody2D>(AlvoPath);
+            _Alvo = GetNode<Heroi>(AlvoPath);
         }
         if (NavegacaoPath != null)
         {
             _Navegacao = GetNode<Navigation2D>(NavegacaoPath);
+        }
+    }
+
+    public override void _Process(float delta)
+    {
+        if (Vida <= 0)
+        {
+            QueueFree();
         }
     }
 
@@ -94,9 +113,9 @@ public class Inimigo : KinematicBody2D
         {
             if (_AtaqueTime > AtaqueDelay)
             {
-                /* programar dano no alvo */
-
-                GD.Print("Recebeu dano o alvo!");
+                _Alvo.Ferir(Forca);
+                GD.Print($"Vida do Zumbi: {Vida}");
+                GD.Print($"Vida do Herói: {_Alvo.Vida}");
 
                 _AtaqueTime = 0;
             }
