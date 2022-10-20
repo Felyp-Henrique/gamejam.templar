@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "IoWHosgFUZSmwQFz+k7asE+dfxZfhf3r6tKRn4VVLWWhO9CoMswZVdGnnRQkdda0b/X3YDcdBwTWJHZd2CLe4w==",
+  "dgSpecHash": "pB/IYOS+HBIM+IVQWfyXbPIX79eoA+PESpxNQoPha45gxwGiW1swLh+sLtlGQ3inV6eqazZ0anjS+PKfeGplow==",
   "success": true,
-  "projectFilePath": "/home/felyp/GameJam6/GameJam6.csproj",
+  "projectFilePath": "/home/felyp.fernandes/Gith/gamejam.6/GameJam6.csproj",
   "expectedPackageFiles": [
-    "/home/felyp/.nuget/packages/microsoft.netframework.referenceassemblies/1.0.2/microsoft.netframework.referenceassemblies.1.0.2.nupkg.sha512",
-    "/home/felyp/.nuget/packages/microsoft.netframework.referenceassemblies.net472/1.0.2/microsoft.netframework.referenceassemblies.net472.1.0.2.nupkg.sha512"
+    "/home/felyp.fernandes/.nuget/packages/microsoft.netframework.referenceassemblies/1.0.2/microsoft.netframework.referenceassemblies.1.0.2.nupkg.sha512",
+    "/home/felyp.fernandes/.nuget/packages/microsoft.netframework.referenceassemblies.net472/1.0.2/microsoft.netframework.referenceassemblies.net472.1.0.2.nupkg.sha512"
   ],
   "logs": []
 }

@@ -12,6 +12,7 @@ config_version=4
 
 config/name="GameJam6"
 run/main_scene="res://Scenes/Maps/Limbo.tscn"
+boot_splash/bg_color=Color( 0, 0, 0, 1 )
 config/icon="res://icon.png"
 
 [display]

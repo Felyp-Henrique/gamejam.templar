@@ -41,6 +41,7 @@ collision_layer = 16
 collision_mask = 19
 script = ExtResource( 9 )
 Velocidade = 40
+Forca = 10.0
 
 [node name="Vida" parent="." instance=ExtResource( 10 )]
 anchor_right = 0.0

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/felyp/GameJam6/GameJam6.csproj": {}
+    "/home/felyp.fernandes/Gith/gamejam.6/GameJam6.csproj": {}
   },
   "projects": {
-    "/home/felyp/GameJam6/GameJam6.csproj": {
+    "/home/felyp.fernandes/Gith/gamejam.6/GameJam6.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/felyp/GameJam6/GameJam6.csproj",
+        "projectUniqueName": "/home/felyp.fernandes/Gith/gamejam.6/GameJam6.csproj",
         "projectName": "GameJam6",
-        "projectPath": "/home/felyp/GameJam6/GameJam6.csproj",
-        "packagesPath": "/home/felyp/.nuget/packages/",
-        "outputPath": "/home/felyp/GameJam6/.mono/temp/obj/",
+        "projectPath": "/home/felyp.fernandes/Gith/gamejam.6/GameJam6.csproj",
+        "packagesPath": "/home/felyp.fernandes/.nuget/packages/",
+        "outputPath": "/home/felyp.fernandes/Gith/gamejam.6/.mono/temp/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/felyp/.nuget/NuGet/NuGet.Config"
+          "/home/felyp.fernandes/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net472"
@@ -45,7 +45,7 @@
               "autoReferenced": true
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.400/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/dotnet6-6.0.110/sdk/6.0.110/RuntimeIdentifierGraph.json"
         }
       }
     }

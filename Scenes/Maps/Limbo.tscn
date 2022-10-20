@@ -1,10 +1,11 @@
-[gd_scene load_steps=45 format=2]
+[gd_scene load_steps=46 format=2]
 
 [ext_resource path="res://Assets/Tiles/cavernas.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Maps/Limbo.cs" type="Script" id=2]
 [ext_resource path="res://Scenes/Heroi/Heroi.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Core/InimigoFactory.cs" type="Script" id=4]
 [ext_resource path="res://Scenes/Inimigos/Zumbi.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Screens/GameOver.tscn" type="PackedScene" id=6]
 
 [sub_resource type="Curve2D" id=37]
 _data = {
@@ -321,7 +322,7 @@ outlines = [ PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 ) ]
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
-[sub_resource type="TileSet" id=1]
+[sub_resource type="TileSet" id=47]
 0/name = "cavernas.png 0"
 0/texture = ExtResource( 1 )
 0/tex_offset = Vector2( 0, 0 )
@@ -354,6 +355,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 [node name="Limbo" type="Node2D"]
 script = ExtResource( 2 )
 InimigoLength = 3
+GameOverScene = ExtResource( 6 )
 
 [node name="InimigoFactory" type="Node2D" parent="."]
 script = ExtResource( 4 )
@@ -384,7 +386,7 @@ tile_data = PoolIntArray( 0, 0, 65538, 1, 0, 196611, 2, 0, 196611, 3, 0, 196611,
 
 [node name="Chao" type="TileMap" parent="Navigation2D"]
 z_index = -2
-tile_set = SubResource( 1 )
+tile_set = SubResource( 47 )
 cell_size = Vector2( 16, 16 )
 bake_navigation = true
 format = 1

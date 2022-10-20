@@ -14,6 +14,9 @@ public class Mapa : Node2D
     [Export]
     public NodePath SpawnerLocationsPath = "./Spawner/Locations";
 
+    [Export]
+    public PackedScene GameOverScene;
+
     private Heroi _Heroi;
     private InimigoFactory _InimigoFactory;
     private PathFollow2D _SpawnerLocations;
@@ -42,6 +45,11 @@ public class Mapa : Node2D
 
                 InimigoLength -= 1;
             }
+        }
+
+        if (_Heroi != null && _Heroi.GetVida() <= 0)
+        {
+            GetTree().ChangeScene(GameOverScene.ResourcePath);
         }
     }
 }

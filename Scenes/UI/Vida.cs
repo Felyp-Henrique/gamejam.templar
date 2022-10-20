@@ -34,7 +34,6 @@ public class Vida : CenterContainer
         }
     }
 
-    float time = 0;
     public override void _Process(float delta)
     {
 

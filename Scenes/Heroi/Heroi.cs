@@ -57,7 +57,6 @@ public class Heroi : KinematicBody2D, IStatus
         if (Input.IsActionPressed("ui_run"))
         {
             _Velocidade = VelocidadeRun;
-            GD.Print("Correr");
         }
         else
         {
