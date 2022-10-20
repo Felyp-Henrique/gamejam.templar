@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/heroi_attack_2.png-8cb4b900d3df2b0361801505a96fb773.stex"
+path="res://.import/vida.png-7750730cc52e73d0abf062fa4609348b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/heroi_attack_2.png"
-dest_files=[ "res://.import/heroi_attack_2.png-8cb4b900d3df2b0361801505a96fb773.stex" ]
+source_file="res://Assets/Sprites/vida.png"
+dest_files=[ "res://.import/vida.png-7750730cc52e73d0abf062fa4609348b.stex" ]
 
 [params]
 

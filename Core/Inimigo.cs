@@ -1,6 +1,6 @@
 using Godot;
 
-public class Inimigo : KinematicBody2D
+public class Inimigo : KinematicBody2D, IStatus
 {
     [Export]
     public int Velocidade = 55;
@@ -9,7 +9,7 @@ public class Inimigo : KinematicBody2D
     public double Vida = 100d;
 
     [Export]
-    public double Forca = 2;
+    public double Forca = 5;
 
     [Export]
     public NodePath SpritePath = "./Sprite";
@@ -36,6 +36,11 @@ public class Inimigo : KinematicBody2D
     private Area2D _Ataque;
     private float _AtaqueTime;
     private Navigation2D _Navegacao;
+
+    public double GetVida()
+    {
+        return Vida;
+    }
 
     public void Ferir(double forca)
     {

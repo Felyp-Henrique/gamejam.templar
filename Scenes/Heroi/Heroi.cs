@@ -1,12 +1,15 @@
 using Godot;
 
-public class Heroi : KinematicBody2D
+public class Heroi : KinematicBody2D, IStatus
 {
     [Export]
     public double Vida = 100;
 
     [Export]
-    public int Velocidade = 50;
+    public int VelocidadeWalk = 50;
+
+    [Export]
+    public int VelocidadeRun = 100;
 
     [Export]
     public double Forca = 25;
@@ -17,7 +20,13 @@ public class Heroi : KinematicBody2D
     [Signal]
     public delegate void Ataque(double forca);
 
+    private int _Velocidade;
     private AnimatedSprite _Sprite;
+
+    public double GetVida()
+    {
+        return Vida;
+    }
 
     public void Ferir(double forca)
     {
@@ -45,7 +54,17 @@ public class Heroi : KinematicBody2D
         movimento.y = Input.GetActionStrength("ui_down") - Input.GetActionStrength("ui_up");
         movimento = movimento.Normalized();
 
-        MoveAndSlide(movimento * Velocidade);
+        if (Input.IsActionPressed("ui_run"))
+        {
+            _Velocidade = VelocidadeRun;
+            GD.Print("Correr");
+        }
+        else
+        {
+            _Velocidade = VelocidadeWalk;
+        }
+
+        MoveAndSlide(movimento * _Velocidade);
 
         if (_Sprite != null) {
             if (movimento != Vector2.Zero)
